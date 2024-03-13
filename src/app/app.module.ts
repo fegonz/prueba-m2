@@ -7,10 +7,12 @@ import { FooterModule, ResetPasswordFormModule, CreateAccountFormModule, ChangeP
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
+import { TimeHourComponent } from './pages/time-hour/time-hour/time-hour.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TimeHourComponent
   ],
   imports: [
     BrowserModule,

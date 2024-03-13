@@ -6,6 +6,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
+import { TimeHourComponent } from './pages/time-hour/time-hour/time-hour.component';
+import { ComponentsModule } from './pages/time-hour/components.module';
 
 const routes: Routes = [
   {
@@ -42,6 +44,15 @@ const routes: Routes = [
     path: 'change-password/:recoveryCode',
     component: ChangePasswordFormComponent,
     canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'fecha-hora',
+    component: TimeHourComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'components',
+    loadChildren: () => import('./pages/time-hour/components.module').then(m => m.ComponentsModule)
   },
   {
     path: '**',

@@ -1,0 +1,14 @@
+
+<div class="hour-container">
+    <h2>Fecha y hora actual</h2>
+    <h4 *ngIf="spinner else cargando">{{ fechaHora }}</h4>
+    <ng-template #cargando>
+        <div class="spinner" >
+            
+        </div>
+    </ng-template>
+
+
+    
+</div>
+
